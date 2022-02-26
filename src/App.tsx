@@ -2,10 +2,7 @@ import * as React from "react"
 import {
   ChakraProvider,
   Box,
-  Text,
-  Container,
   VStack,
-  Code,
   Grid,
   theme,
 } from "@chakra-ui/react"

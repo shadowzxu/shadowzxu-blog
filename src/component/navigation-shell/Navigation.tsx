@@ -1,7 +1,9 @@
 import * as React from "react";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Flex, Spacer, Box, Button, Heading,  IconButton, VStack } from '@chakra-ui/react';
 import { FiAlignJustify } from 'react-icons/fi';
+import { useTranslation } from "react-i18next";
 
 export const Navigation = () => {
 
@@ -20,6 +22,8 @@ export const Navigation = () => {
 
     const hamburgerMenu = {display: 'none'};
 
+    const {t, i18n} = useTranslation();
+
     return (
         <VStack align = 'center'>
             <Flex w='95vw'>
@@ -28,16 +32,17 @@ export const Navigation = () => {
                 </Box>
             <Spacer />
                 <Flex>
-                    <Button sx = {navButtonStyle} mr='4' >About</Button>
-                    <Button sx = {navButtonStyle}>Blog</Button>
-                    <ColorModeSwitcher justifySelf="flex-end"/>
-                    <IconButton sx = {navHamburgerStyle} ml = '4' aria-label='menu' icon={<FiAlignJustify />} onClick={toggleShowMenu}/>
+                    <Button sx = {navButtonStyle} mr='2' >{t("NAV_ABOUT_BUTTON_TEXT")}</Button>
+                    <Button sx = {navButtonStyle} mr='2'>{t("NAV_BLOG_BUTTON_TEXT")}</Button>
+                    <ColorModeSwitcher mr='2'/>
+                    <LanguageSwitcher />
+                    <IconButton sx = {navHamburgerStyle} ml = '2' aria-label='menu' icon={<FiAlignJustify />} onClick={toggleShowMenu}/>
                 </Flex>
             </Flex>
 
             <VStack w='95vw' sx = {active ? {} : hamburgerMenu}>
-                <Button w='100%'>About</Button>
-                <Button w='100%'>Blog</Button>
+                <Button w='100%'>{t("NAV_ABOUT_BUTTON_TEXT")}</Button>
+                <Button w='100%'>{t("NAV_BLOG_BUTTON_TEXT")}</Button>
             </VStack>
         </VStack>
     );

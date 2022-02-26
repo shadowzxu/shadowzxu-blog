@@ -5,10 +5,14 @@ import { App } from "./App"
 import reportWebVitals from "./reportWebVitals"
 import * as serviceWorker from "./serviceWorker"
 
+import './component/translation/i18n';
+
 ReactDOM.render(
   <React.StrictMode>
-    <ColorModeScript />
-    <App />
+    <React.Suspense fallback = {<div>Loading...</div>}>
+      <ColorModeScript />
+      <App />
+    </React.Suspense>
   </React.StrictMode>,
   document.getElementById("root"),
 )
