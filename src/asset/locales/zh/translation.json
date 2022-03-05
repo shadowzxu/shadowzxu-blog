@@ -1,4 +1,7 @@
 {
     "NAV_ABOUT_BUTTON_TEXT": "关于",
-    "NAV_BLOG_BUTTON_TEXT": "博客"
+    "NAV_BLOG_BUTTON_TEXT": "博客",
+
+    "HOME_WELCOME_BANNER_TITLE": "你好, 我的朋友！",
+    "HOME_WELCOME_BANNER_DESCRIPTION": "我是Jason, 我是一位来自温哥华的Web开发者, 欢迎来到我的个人空间。"
 }

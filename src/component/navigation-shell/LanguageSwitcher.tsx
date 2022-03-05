@@ -1,4 +1,3 @@
-import * as React from "react"
 import {
     Select
 } from "@chakra-ui/react"
@@ -10,13 +9,15 @@ export const LanguageSwitcher = () => {
     const {t, i18n} = useTranslation();
     
     const changeLanguage = (event: any) => {
-        console.log(event.target.value);
         i18n.changeLanguage(event.target.value);
     };
 
   return (
-    <Select w='75px' icon={<AiOutlineGlobal/>}
-    onChange = {(event) => changeLanguage(event)}>
+    <Select 
+      w='75px' size='md' fontSize='lg'
+      icon={<AiOutlineGlobal/>} 
+      onChange = {(event) => changeLanguage(event)} 
+      defaultValue = {i18n.language}>    
         <option value = 'en'>En</option>
         <option value = 'zh'>中</option>
     </Select>

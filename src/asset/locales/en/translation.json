@@ -1,4 +1,7 @@
 {
     "NAV_ABOUT_BUTTON_TEXT": "About",
-    "NAV_BLOG_BUTTON_TEXT": "Blog"
+    "NAV_BLOG_BUTTON_TEXT": "Blog",
+
+    "HOME_WELCOME_BANNER_TITLE": "Welcome to ShadowZXu Blog!",
+    "HOME_WELCOME_BANNER_DESCRIPTION": "My name is Jason Xu. I am a software developer based in Vancouver, Canada. You can find everything here i like to share about my life."
 }

@@ -8,16 +8,17 @@ import {
 } from "@chakra-ui/react"
 import { Navigation } from "./component/navigation-shell/Navigation"
 import { Logo } from "./Logo"
+import { WelcomeBanner } from "./component/home/WelcomeBanner"
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <Navigation />
-        <VStack spacing={8}>
-          <Logo h="40vmin" pointerEvents="none" />
-        </VStack>
-      </Grid>
+    <Box textAlign="center" fontSize="xl" p={2} position = "relative" width = "100%">
+      <Navigation />
     </Box>
+
+    <VStack spacing = {8}>
+      <WelcomeBanner />
+      <Logo h="40vmin" pointerEvents="none" />
+    </VStack>
   </ChakraProvider>
 )

@@ -30,13 +30,34 @@ export const Navigation = () => {
                 <Box p='2'>
                     <Heading size='md'>ShadowZxu Blog</Heading>
                 </Box>
+            
             <Spacer />
                 <Flex>
-                    <Button sx = {navButtonStyle} mr='2' >{t("NAV_ABOUT_BUTTON_TEXT")}</Button>
-                    <Button sx = {navButtonStyle} mr='2'>{t("NAV_BLOG_BUTTON_TEXT")}</Button>
-                    <ColorModeSwitcher mr='2'/>
+                    <Button 
+                        sx = {navButtonStyle} 
+                        mr='2' 
+                        variant ='ghost'>
+                        {t("NAV_ABOUT_BUTTON_TEXT")}
+                    </Button>
+
+                    <Button 
+                        sx = {navButtonStyle}
+                        mr='2' 
+                        variant ='ghost'>
+                        {t("NAV_BLOG_BUTTON_TEXT")}
+                    </Button>
+                    
                     <LanguageSwitcher />
-                    <IconButton sx = {navHamburgerStyle} ml = '2' aria-label='menu' icon={<FiAlignJustify />} onClick={toggleShowMenu}/>
+                    
+                    <ColorModeSwitcher ml='2'/>
+                    
+                    <IconButton 
+                        sx = {navHamburgerStyle} 
+                        ml = '2' 
+                        aria-label='menu' 
+                        variant = 'ghost'
+                        icon={<FiAlignJustify />} 
+                        onClick={toggleShowMenu}/>
                 </Flex>
             </Flex>
 
