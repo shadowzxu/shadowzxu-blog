@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import { Flex, Spacer, Box, Button, Heading,  IconButton, VStack } from '@chakra-ui/react';
+import { Flex, Spacer, Box, Button, Heading,  IconButton, VStack, useColorModeValue } from '@chakra-ui/react';
 import { FiAlignJustify } from 'react-icons/fi';
 import { useTranslation } from "react-i18next";
 

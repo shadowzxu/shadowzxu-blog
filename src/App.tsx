@@ -10,15 +10,18 @@ import { Navigation } from "./component/navigation-shell/Navigation"
 import { Logo } from "./Logo"
 import { WelcomeBanner } from "./component/home/WelcomeBanner"
 
-export const App = () => (
+export const App = () => {
+  
+  
+  return(
   <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl" p={2} position = "relative" width = "100%">
+    <Box textAlign="center" fontSize="xl" p={2} position = "sticky" width = "100%" top="0" >
       <Navigation />
     </Box>
 
     <VStack spacing = {8}>
       <WelcomeBanner />
-      <Logo h="40vmin" pointerEvents="none" />
+      {/* <Logo h="40vmin" pointerEvents="none" /> */}
     </VStack>
   </ChakraProvider>
-)
+)}
