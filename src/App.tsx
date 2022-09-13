@@ -1,9 +1,6 @@
 import * as React from "react"
 import {
   ChakraProvider,
-  Box,
-  VStack,
-  Grid,
   theme,
 } from "@chakra-ui/react"
 import { Navigation } from "./component/navigation-shell/Navigation"
@@ -15,13 +12,8 @@ export const App = () => {
   
   return(
   <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl" p={2} position = "sticky" width = "100%" top="0" >
-      <Navigation />
-    </Box>
-
-    <VStack spacing = {8}>
-      <WelcomeBanner />
+    <Navigation />
+    <WelcomeBanner />
       {/* <Logo h="40vmin" pointerEvents="none" /> */}
-    </VStack>
   </ChakraProvider>
 )}

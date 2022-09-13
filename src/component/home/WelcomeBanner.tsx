@@ -8,25 +8,26 @@ export const WelcomeBanner = () => {
     const SHADOWZXU_BLOG_LINKEDIN_LINK = "https://linkedin.com/in/ziyou-xu";
 
     const {t, i18n} = useTranslation();
-    const bg = useColorModeValue("teal.50","teal.400");
-    const linkedInBtnColorScheme = useColorModeValue('linkedin', 'github');
+    const bg = useColorModeValue("teal.50","");
 
     return (
-        <Center h ='75vh' w='100vw' bg={bg}>
+        <Center h ='75vh' w='100vw' bg={bg} >
             <VStack textAlign='center' spacing = {8} margin = {5}>
                 <Heading>{t("HOME_WELCOME_BANNER_TITLE")}</Heading>
                 <Text mt='8'>{t("HOME_WELCOME_BANNER_DESCRIPTION")}</Text>
                 <ButtonGroup variant='outline'spacing='6'>
-                    <Button
+                    <Button 
                         colorScheme='github'
                         leftIcon={<FaGithub />}
-                        onClick={() => {window.open(SHADOWZXU_BLOG_GITHUB_LINK, "_blank")}}>
+                        onClick={() => {window.open(SHADOWZXU_BLOG_GITHUB_LINK, "_blank")}}
+                        position = "static">
                         Github
                     </Button>
                     <Button
-                        colorScheme={linkedInBtnColorScheme}
+                        colorScheme='linkedin'
                         leftIcon={<FaLinkedin />}
-                        onClick={() => {window.open(SHADOWZXU_BLOG_LINKEDIN_LINK, "_blank")}}>
+                        onClick={() => {window.open(SHADOWZXU_BLOG_LINKEDIN_LINK, "_blank")}}
+                        position = "static">
                         LinkedIn
                     </Button>
                 </ButtonGroup>
